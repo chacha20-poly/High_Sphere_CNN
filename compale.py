@@ -38,7 +38,7 @@ def evaluate_image(x_clean, x_recon):
     )
     
     return mse_val, psnr_val, ssim_val
-# あなたの HighDimProj (Encoder)
+#HighDimProj (Encoder)
 class HighDimCNN(nn.Module):
     def __init__(self, in_ch=3, n_dim=64):
         super().__init__()
@@ -159,4 +159,5 @@ def infer(image_path):
 
 for i in range(1,9):
     infer("./data/celeba_images/00001{0}.jpg".format(i))
+
 
