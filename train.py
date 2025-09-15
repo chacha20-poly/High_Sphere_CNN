@@ -64,7 +64,7 @@ class CelebADataset(Dataset):
 
     
 
-# あなたの HighDimProj (Encoder)
+#HighDimProj (Encoder)
 class HighDimCNN(nn.Module):
     def __init__(self, in_ch=3, n_dim=64):
         super().__init__()
@@ -175,5 +175,6 @@ torch.save({
     'optimizer_state_dict': optimizer.state_dict(),
     'epoch': epoch
 }, "./checkpoint.pth")
+
 
 print("保存しました")
